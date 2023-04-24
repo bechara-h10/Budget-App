@@ -17,6 +17,14 @@ let balance = 0
 let budget = 0
 
 setBudgetBtn.addEventListener('click', () => {
+  addBudget()
+})
+
+checkAmountBtn.addEventListener('click', () => {
+  checkAmount(expenses, budget)
+})
+
+function addBudget() {
   if (budgetInput.value == '' || budgetInput.value == 0) {
     errorTextBudget.style.display = 'inline-block'
     return
@@ -26,9 +34,10 @@ setBudgetBtn.addEventListener('click', () => {
   totalBudgetValue.textContent = budget
   balance = budget
   balanceValue.textContent = balance
-})
+  budgetInput.value = ''
+}
 
-checkAmountBtn.addEventListener('click', () => {
+function checkAmount(expenses, budget) {
   expenses += parseInt(productCostInput.value)
   console.log(expenses)
   if (productTitleInput.value == '' || productCostInput.value == '') {
@@ -60,7 +69,9 @@ checkAmountBtn.addEventListener('click', () => {
   expensePrice.appendChild(expensePriceParagraph)
   expenseItem.append(expenseTitle, expensePrice, expenseLogos)
   expensesList.append(expenseItem)
+  productTitleInput.value = ''
+  productCostInput.value = ''
   expensesValue.textContent = expenses
   balance = budget - expenses
   balanceValue.textContent = balance
-})
+}
