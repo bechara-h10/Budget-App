@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #eee;
+  font-family: 'Roboto', sans-serif;
+}
+
+section.top-section {
+  display: flex;
+  column-gap: 30px;
+  padding: 10px 20px;
+}
+
+p {
+  margin: 0 0 5px 0;
+}
+
+div.budget-container,
+div.expenses-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  height: 200px;
+  padding: 5px;
+  padding-left: 15px;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.05);
+}
+
+div.budget-container input,
+div.expenses-container input {
+  width: 100%;
+  height: 30px;
+  border: solid 1px #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+div.budget-container input:focus,
+div.expenses-container input:focus {
+  outline: solid 1px #aaa;
+}
+
+div.budget-container button.btn,
+div.expenses-container button.btn {
+  width: max-content;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #4a77d0;
+  cursor: pointer;
+}
+
+section.middle-section {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+div.total-container {
+  width: 100%;
+  display: flex;
+  column-gap: 30%;
+  color: white;
+  background-color: #4a77d0;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+div.total-budget,
+div.expenses,
+div.balance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.output-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+div.total-budget,
+div.expenses,
+div.balance {
+  width: 25%;
+}
+
+section.lower-section {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+div.expenses-list {
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.05);
+  padding: 5px;
+  padding: 15px;
+}
+
+div.expense-item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-left: solid 5px #4a77d0;
+  padding: 10px;
+}
+
+div.expense-title,
+div.expense-price,
+div.expense-logos {
+  width: 30%;
+  display: flex;
+}
+
+div.expense-price {
+  justify-content: center;
+}
+
+div.expense-logos {
+  justify-content: space-evenly;
+}
+
+div.expense-logos .logo {
+  cursor: pointer;
+  color: #4a77d0;
+}
+
+span.error-text {
+  color: red;
+  display: none;
+}
+
+span.error-text.active {
+  display: inline-block;
+}
