@@ -135,8 +135,7 @@ div.expense-logos {
   justify-content: space-evenly;
 }
 
-div.expense-logos .logo {
-  cursor: pointer;
+.logo {
   color: #4a77d0;
 }
 
@@ -147,4 +146,11 @@ span.error-text {
 
 span.error-text.active {
   display: inline-block;
+}
+
+button.edit-button,
+button.delete-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
